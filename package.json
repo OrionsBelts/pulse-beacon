@@ -4,7 +4,9 @@
   "description": "GitHub App to emit events from a repository to Stargate",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "lint": "semistandard",
+    "start": "probot run ./index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,23 @@
   "bugs": {
     "url": "https://github.com/OrionsBelts/pulse-beacon/issues"
   },
-  "homepage": "https://github.com/OrionsBelts/pulse-beacon#readme"
+  "homepage": "https://github.com/OrionsBelts/pulse-beacon#readme",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "semistandard": "github:mikemimik/semistandard",
+    "smee-client": "^1.0.2"
+  },
+  "dependencies": {
+    "probot": "^7.1.2"
+  },
+  "semistandard": {
+    "globals": [
+      "test",
+      "describe",
+      "beforeEach",
+      "afterEach",
+      "expect",
+      "jest"
+    ]
+  }
 }
